@@ -7,7 +7,8 @@ import { createPinia } from 'pinia'
 
 loadFonts()
 
-createApp(App).use(createPinia())
-  .use(router)
-  .use(vuetify)
-  .mount('#app')
+createApp(App)
+.use(createPinia())
+.use(router)
+.use(vuetify)
+.mount('#app')

@@ -1,9 +1,15 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw } from 'vue-router'
+import LandingPage from '../views/LandingPage.vue'
 import HomeView from '../views/HomeView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    name: 'landing-page',
+    component: LandingPage
+  },
+  {
+    path: '/home',
     name: 'home',
     component: HomeView
   },
@@ -18,7 +24,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 

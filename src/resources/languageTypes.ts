@@ -1,9 +1,9 @@
-export enum LanguageType {
+export enum LanguageTypes {
     DK = 'dk',
     EN = 'en',
 }
 
 export const allLanguages = [
-    { value: LanguageType.DK, caption: "Dansk" },
-    { value: LanguageType.EN, caption: "English" },
+    { value: LanguageTypes.DK, caption: "Dansk" },
+    { value: LanguageTypes.EN, caption: "English" },
 ]

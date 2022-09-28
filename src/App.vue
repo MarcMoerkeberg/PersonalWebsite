@@ -16,13 +16,10 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
+import { baseStore } from './store/base/baseStore';
 
-var routesToHideAppBar = ['landing-page'];
-var currentRoute = computed(() => { return useRoute().name });
-var showAppBar = computed(() => { return currentRoute.value && !routesToHideAppBar.includes(currentRoute.value.toString()) });
+const store = baseStore();
 
+var currentRoute = computed(() => { return useRoute() });
+var showAppBar = computed(() => { return !store.RoutesToHideAppBar.includes(currentRoute.value.path); })
 </script>
-
-<style>
-
-</style>

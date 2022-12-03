@@ -1,3 +1,7 @@
 {
-  "message": "Hello with you!"
+  "message": "Hello with you!",
+  "about": "About",
+  "blog": "Blog",
+  "about-summary": "If you want to get to know me better professionally.",
+  "blog-summary": "A diary of sorts, with different subject and my opinions thereof. \n Contains a mixture of both popculture, movie reviews with more."
 }

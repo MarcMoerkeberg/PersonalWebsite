@@ -1,20 +1,21 @@
 import { createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw } from 'vue-router'
 import LandingPage from '../views/LandingPage.vue'
 import HomeView from '../views/HomeView.vue'
+import { RoutePathEnum } from '@/models/enums/RoutePathEnum'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
+    path: RoutePathEnum.LandingPage,
     name: 'landing-page',
     component: LandingPage
   },
   {
-    path: '/home',
+    path: RoutePathEnum.Home,
     name: 'home',
     component: HomeView
   },
   {
-    path: '/about',
+    path: RoutePathEnum.About,
     name: 'about',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route

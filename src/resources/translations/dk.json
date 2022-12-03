@@ -1,3 +1,7 @@
 {
-  "message": "Hej med dig!"
+  "message": "Hej med dig!",
+  "about": "Information",
+  "blog": "Blog",
+  "about-summary": "CV - erfaring - baggrund",
+  "blog-summary": "Blandet om programmering, mad, film og andre interesser"
 }

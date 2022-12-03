@@ -1,0 +1,13 @@
+.v-card-overlay {
+    align-items: center;
+    bottom: 0;
+    justify-content: center;
+    opacity: .8;
+    position: absolute;
+    width: 100%;
+    background-color: black;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

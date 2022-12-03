@@ -13,7 +13,7 @@ interface Props {
 const componentProps = defineProps<Props>();
 
 const store = baseStore();
-const summaryHeight = computed(() => componentProps.summaryHeightPercent === undefined ? '40%' : `${componentProps.summaryHeightPercent}%;`).value;
+const summaryHeight = computed(() => componentProps.summaryHeightPercent === undefined ? '30%' : `${componentProps.summaryHeightPercent}%`).value;
 </script>
 
 <template>
@@ -26,7 +26,7 @@ const summaryHeight = computed(() => componentProps.summaryHeightPercent === und
                 <v-card-title class="text-center text-xl-h4">{{ componentProps.headLine }}</v-card-title>
                 <v-expand-transition>
                     <div v-if="isHovering"
-                         class="d-flex transition-fast-in-fast-out v-card-overlay"
+                         class="d-flex transition-fast-in-fast-out v-card-overlay padding-x-10p"
                          :style="{ height: summaryHeight }">
                         {{ componentProps.summaryText }}
                     </div>

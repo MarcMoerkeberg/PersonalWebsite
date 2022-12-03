@@ -13,6 +13,12 @@
     margin-right: 20px;
 }
 
+/* PADDING */
+.padding-x-10p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .align-items-center {
     align-items: center;
 }

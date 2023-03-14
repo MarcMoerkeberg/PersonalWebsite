@@ -14,9 +14,7 @@ watch(currentRoute.value, (newVal) => { store.setCurrentRoute(newVal); })
 		<v-app-bar app
 				   color="primary"
 				   v-if="store.showAppBar">
-
 			<v-toolbar-title>Her skal der være en lækker titel!</v-toolbar-title>
-
 		</v-app-bar>
 
 		<v-main color="primary">

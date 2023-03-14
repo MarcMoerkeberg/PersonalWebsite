@@ -34,7 +34,6 @@ const summaryHeight = computed(() => componentProps.summaryHeightPercent === und
                 <p class="text-center text-xl-h4">{{ componentProps.headLine }}</p>
             </v-sheet>
 
-
             <v-expand-transition>
                 <div v-if="isHovering"
                      class="d-flex transition-fast-in-fast-out v-card-overlay padding-x-10p"
@@ -42,7 +41,6 @@ const summaryHeight = computed(() => componentProps.summaryHeightPercent === und
                     {{ componentProps.summaryText }}
                 </div>
             </v-expand-transition>
-
         </v-card>
     </v-hover>
 </template>

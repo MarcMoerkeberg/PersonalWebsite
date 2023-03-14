@@ -8,6 +8,6 @@ export const baseGetters: PiniaGetterMapper<IBaseGetters, BaseStoreMapper> = {
         return state.Language;
     },
     showAppBar(state): boolean {
-        return !state.RoutesToHideAppBar.includes(state.CurrentRoute.path);
+        return !state.RoutesToHideAppBar.includes(state.CurrentRoute);
     }
 }

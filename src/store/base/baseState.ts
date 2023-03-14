@@ -6,7 +6,7 @@ import { IBaseState } from "./types/IBaseState";
 export function baseState(): IBaseState {
     return {
         Language: LanguageTypes.DK,
-        CurrentRoute: {} as RouteLocationNormalizedLoaded,
-        RoutesToHideAppBar: [RoutePathEnum.LandingPage.toString()]
+        CurrentRoute: RoutePathEnum.LandingPage,
+        RoutesToHideAppBar: [RoutePathEnum.LandingPage]
     }
 }

@@ -13,7 +13,8 @@ export const baseActions: PiniaActionMapper<IBaseActions, BaseStoreMapper> = {
         i18n.global.locale = languageType;
     },
     async setCurrentRoute(newRoute: RouteLocationNormalizedLoaded) {
-        this.CurrentRoute = newRoute;
+        const newRouteAsPathEnum = newRoute.fullPath as RoutePathEnum;
+        this.CurrentRoute = newRouteAsPathEnum;
     },
     async navigateToView(fullRoutePath: RoutePathEnum) {
         router.push(fullRoutePath);

@@ -1,8 +1,8 @@
+import { RoutePathEnum } from "@/models/enums/RoutePathEnum";
 import { LanguageTypes } from "@/resources/languageTypes";
-import { RouteLocationNormalizedLoaded } from "vue-router";
 
 export type IBaseState = {
     Language: LanguageTypes,
-    CurrentRoute: RouteLocationNormalizedLoaded,
-    RoutesToHideAppBar: String[]
+    CurrentRoute: RoutePathEnum,
+    RoutesToHideAppBar: RoutePathEnum[]
 }

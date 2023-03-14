@@ -22,3 +22,15 @@
 .align-items-center {
     align-items: center;
 }
+
+/* FLEXBOX */
+
+.flex-center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.gap-50p {
+    gap: 50px;
+}

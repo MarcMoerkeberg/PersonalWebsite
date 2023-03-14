@@ -1,5 +1,6 @@
 export enum RoutePathEnum {
     LandingPage = '/',
-    Home = '/home',
-    About = '/about'
+    Blog = '/blog',
+    About = '/about',
+    Contact = '/contact'
 }

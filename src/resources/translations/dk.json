@@ -2,6 +2,8 @@
   "message": "Hej med dig!",
   "about": "Information",
   "blog": "Blog",
-  "about-summary": "CV - erfaring - baggrund",
-  "blog-summary": "Blandet om programmering, mad, film og andre interesser"
+  "contact": "Kontakt",
+  "about-summary": "CV, erfaring & baggrund",
+  "blog-summary": "Mad, teknologi & fritid",
+  "contact-summary": "Kontakt informationer"
 }

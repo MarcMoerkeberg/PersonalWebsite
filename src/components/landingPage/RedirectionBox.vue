@@ -6,7 +6,7 @@ import { computed } from 'vue';
 interface Props {
     headLine: string,
     summaryText: string,
-    imagePath: string,
+    imagePath?: string,
     nagivationPath: RoutePathEnum,
     summaryHeightPercent?: number
 }
@@ -21,17 +21,28 @@ const summaryHeight = computed(() => componentProps.summaryHeightPercent === und
         <v-card :class="['margin-x-20p', 'width-20vw', { 'cursor-pointer': isHovering }]"
                 v-bind="props"
                 @click="store.navigateToView(componentProps.nagivationPath)">
-            <v-img class="align-items-center"
+
+            <v-img v-if="imagePath"
+                   class="flex-center"
                    :src="componentProps.imagePath">
-                <v-card-title class="text-center text-xl-h4">{{ componentProps.headLine }}</v-card-title>
-                <v-expand-transition>
-                    <div v-if="isHovering"
-                         class="d-flex transition-fast-in-fast-out v-card-overlay padding-x-10p"
-                         :style="{ height: summaryHeight }">
-                        {{ componentProps.summaryText }}
-                    </div>
-                </v-expand-transition>
+                <p class="text-center text-xl-h4">{{ componentProps.headLine }}</p>
             </v-img>
+
+            <v-sheet v-else
+                     color="primary-lighten-1"
+                     class="flex-center height-250p">
+                <p class="text-center text-xl-h4">{{ componentProps.headLine }}</p>
+            </v-sheet>
+
+
+            <v-expand-transition>
+                <div v-if="isHovering"
+                     class="d-flex transition-fast-in-fast-out v-card-overlay padding-x-10p"
+                     :style="{ height: summaryHeight }">
+                    {{ componentProps.summaryText }}
+                </div>
+            </v-expand-transition>
+
         </v-card>
     </v-hover>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld :test="'Hej med dig!'"/>
+  <HelloWorld :test="'Hej med dig!'" />
 </template>
 
 <script setup lang="ts">

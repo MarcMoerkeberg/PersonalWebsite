@@ -1,4 +1,4 @@
-export enum RoutePathEnum {
+export enum RoutePath {
     LandingPage = '/',
     Blog = '/blog',
     About = '/about',

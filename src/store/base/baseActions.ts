@@ -5,18 +5,21 @@ import { PiniaActionMapper } from "@/store/storeAdaptionHelpers"
 import { IBaseActions } from "./types/IBaseActions";
 import { RouteLocationNormalizedLoaded } from "vue-router";
 import router from "@/router";
-import { RoutePathEnum } from "@/models/enums/RoutePathEnum";
+import { RoutePath } from "@/models/enums/RoutePath";
 
 export const baseActions: PiniaActionMapper<IBaseActions, BaseStoreMapper> = {
-    async setCurrentLanguage(languageType: LanguageTypes) {
+    async SetCurrentLanguage(languageType: LanguageTypes) {
         this.Language = languageType;
         i18n.global.locale = languageType;
     },
-    async setCurrentRoute(newRoute: RouteLocationNormalizedLoaded) {
-        const newRouteAsPathEnum = newRoute.fullPath as RoutePathEnum;
+    async SetCurrentRoute(newRoute: RouteLocationNormalizedLoaded) {
+        const newRouteAsPathEnum = newRoute.fullPath as RoutePath;
         this.CurrentRoute = newRouteAsPathEnum;
     },
-    async navigateToView(fullRoutePath: RoutePathEnum) {
+    async NavigateToView(fullRoutePath: RoutePath) {
         router.push(fullRoutePath);
+    },
+    OpenInNewTab: function (link: string | URL): void {
+        window.open(link);
     }
 }

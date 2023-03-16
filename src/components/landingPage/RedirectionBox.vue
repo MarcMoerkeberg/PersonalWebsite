@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { RoutePathEnum } from '@/models/enums/RoutePathEnum';
 import { baseStore } from '@/store/base/baseStore';
 import { computed } from 'vue';
+import { RoutePath } from '@/models/enums/RoutePath'
+
 
 interface Props {
     headLine: string,
     summaryText: string,
     imagePath?: string,
-    nagivationPath: RoutePathEnum,
+    nagivationPath: RoutePath,
     summaryHeightPercent?: number
 }
 const componentProps = defineProps<Props>();
@@ -20,7 +21,7 @@ const summaryHeight = computed(() => componentProps.summaryHeightPercent === und
     <v-hover v-slot="{ isHovering, props }">
         <v-card :class="['margin-x-20p', 'width-20vw', { 'cursor-pointer': isHovering }]"
                 v-bind="props"
-                @click="store.navigateToView(componentProps.nagivationPath)">
+                @click="store.NavigateToView(componentProps.nagivationPath)">
 
             <v-img v-if="imagePath"
                    class="flex-center"

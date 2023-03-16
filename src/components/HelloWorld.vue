@@ -37,10 +37,12 @@ var message = computed(() => t(TranslationKeys.Message))
 function changeLanguage() {
   var currlang = store.$state.Language;
   var currentLanguage = store.getCurrentCurrentLanguage;
-  store.setCurrentLanguage(currentLanguage === LanguageTypes.DK ? LanguageTypes.EN : LanguageTypes.DK);
+  store.SetCurrentLanguage(currentLanguage === LanguageTypes.DK ? LanguageTypes.EN : LanguageTypes.DK);
 }
 
 function toggleTheme() {
   console.log(theme.global.name.value);
 }
+
+const importedImage = require('@/assets/images/speederman.png')
 </script>

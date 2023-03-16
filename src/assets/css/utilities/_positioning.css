@@ -1,6 +1,20 @@
+/* POSITIONING */
+.vertical-center {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 /* MARGIN */
 .margin-20p {
     margin: 20px;
+}
+
+.margin-x-8p {
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .margin-x-10p {
@@ -13,17 +27,25 @@
     margin-right: 20px;
 }
 
+.margin-top-10p {
+    margin-top: 10px;
+}
+
 /* PADDING */
 .padding-x-10p {
     padding-left: 10px;
     padding-right: 10px;
 }
 
+
+/* FLEXBOX */
 .align-items-center {
     align-items: center;
 }
 
-/* FLEXBOX */
+.justify-content-center {
+    justify-content: center;
+}
 
 .flex-center {
     display: flex !important;
@@ -33,4 +55,8 @@
 
 .gap-50p {
     gap: 50px;
+}
+
+.fd-row {
+    flex-direction: row;
 }

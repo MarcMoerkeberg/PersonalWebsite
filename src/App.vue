@@ -6,7 +6,7 @@ import { baseStore } from './store/base/baseStore';
 const store = baseStore();
 var currentRoute = computed(() => { return useRoute() });
 
-watch(currentRoute.value, (newVal) => { store.setCurrentRoute(newVal); })
+watch(currentRoute.value, (newVal) => { store.SetCurrentRoute(newVal); })
 </script>
 		
 <template>
@@ -18,7 +18,7 @@ watch(currentRoute.value, (newVal) => { store.setCurrentRoute(newVal); })
 		</v-app-bar>
 
 		<v-main color="primary">
-			<router-view style="height: 100%;" />
+			<router-view />
 		</v-main>
 	</v-app>
 </template>

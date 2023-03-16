@@ -8,6 +8,7 @@
     "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/resources/**/*.json\""
   },
   "dependencies": {
+    "@iconify/vue": "^4.1.0",
     "@mdi/font": "5.9.55",
     "core-js": "^3.8.3",
     "pinia": "^2.0.14",

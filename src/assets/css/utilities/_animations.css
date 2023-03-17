@@ -1,0 +1,11 @@
+.animate-fill-secondary-color {
+    animation-name: hover-fill-secondary;
+    animation-duration: 0.4s;
+}
+
+@keyframes hover-fill-secondary {
+    to {
+        color: var(--secondary-color);
+    }
+
+}

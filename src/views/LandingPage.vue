@@ -5,7 +5,6 @@ import { useI18n } from 'vue-i18n';
 import { Icon } from '@iconify/vue';
 import { baseStore } from '@/store/base/baseStore';
 import { RoutePath } from '@/models/enums/RoutePath'
-import { ExternalRoute } from '@/models/enums/ExternalRoute'
 import { GetSocialInformation } from '@/models/base/IconInformation';
 
 const store = baseStore();
@@ -29,12 +28,15 @@ const iconInformationForSocials = GetSocialInformation();
                                      :nagivation-path="RoutePath.Contact" />
             </div>
 
-            <div class="flex-center margin-top-10p">
-                  <Icon v-for="socialInfo in iconInformationForSocials"
-                        :icon="socialInfo.Icon"
-                        @click="store.OpenInNewTab(socialInfo.Link)"
-                        class="cursor-pointer margin-x-8p"
-                        width="3em" />
+            <div class="flex-center margin-top-20p">
+                  <v-hover v-for="socialInfo in iconInformationForSocials"
+                           v-slot="{ isHovering, props }">
+                        <Icon v-bind="props"
+                              :class="['cursor-pointer', 'margin-x-10p', { 'animate-fill-secondary-color': isHovering }]"
+                              :icon="socialInfo.Icon"
+                              @click="store.OpenInNewTab(socialInfo.Link)"
+                              width="3em" />
+                  </v-hover>
             </div>
       </div>
 </template>

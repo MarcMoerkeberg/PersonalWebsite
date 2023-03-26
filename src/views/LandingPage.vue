@@ -29,14 +29,11 @@ const iconInformationForSocials = GetSocialInformation();
             </div>
 
             <div class="flex-center margin-top-20p">
-                  <v-hover v-for="socialInfo in iconInformationForSocials"
-                           v-slot="{ isHovering, props }">
-                        <Icon v-bind="props"
-                              :class="['cursor-pointer', 'margin-x-10p', { 'animate-fill-secondary-color': isHovering }]"
-                              :icon="socialInfo.Icon"
-                              @click="store.OpenInNewTab(socialInfo.Link)"
-                              width="3em" />
-                  </v-hover>
+                  <Icon v-for="socialInfo in iconInformationForSocials"
+                        class="cursor-pointer margin-x-10p transition-color-secondary-5s"
+                        :icon="socialInfo.Icon"
+                        @click="store.OpenInNewTab(socialInfo.Link)"
+                        width="3em" />
             </div>
       </div>
 </template>

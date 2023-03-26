@@ -1,11 +1,11 @@
-.animate-fill-secondary-color {
-    animation-name: hover-fill-secondary;
-    animation-duration: 0.4s;
+.transition-color-secondary-5s {
+    /* For Safari 3.0 to 6.0 */
+    -webkit-transition: color .5s;
+
+    /* For modern browser */
+    transition: color .5s;
 }
 
-@keyframes hover-fill-secondary {
-    to {
-        color: var(--secondary-color);
-    }
-
+.transition-color-secondary-5s:hover {
+    color: var(--secondary-color);
 }
